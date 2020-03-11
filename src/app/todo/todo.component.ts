@@ -12,6 +12,9 @@ export class TodoComponent implements OnInit {
   constructor() { }
 
   addTodoInTodos() {
+    if (this.todo === '') {
+      return
+    }
     this.todos.push({
       todo: this.todo,
       done: false
